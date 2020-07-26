@@ -1,7 +1,7 @@
 name: CI Workflow
 on: [push]
 
-job:
+jobs:
   build-and-test:
     name: Build and Run test
     runs-on: ubuntu-latest
