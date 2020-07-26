@@ -1,0 +1,16 @@
+name: CI Workflow
+on: [push]
+
+job:
+  build-and-test:
+    name: Build and Run test
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout the current repository in the ubnuntu system
+        uses: actions/checkout@v1
+      - name: Setup JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      - name: Print content in the current directory
+        run: ls -la
